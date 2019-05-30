@@ -3,8 +3,6 @@ var http = require('toto-request');
 
 exports.do = (event) => {
 
-  console.log(event);
-
   let correlationId = event.correlationId;
   let statusId = event.statusId;
 
