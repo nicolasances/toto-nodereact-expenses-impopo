@@ -16,12 +16,12 @@ exports.do = (event) => {
   }).then((data) => {
 
     // In case of success, post back an OK event
-    totoEventPublisher.publishEvent('postedExpensesOk', {statusId: statusId});
+    totoEventPublisher.publishEvent('postedExpensesOk', {correlationId: correlationId, statusId: statusId});
 
   }, (err) => {
 
     // In case of failure, post back a KO event
-    totoEventPublisher.publishEvent('postedExpensesFailed', {statusId: statusId});
+    totoEventPublisher.publishEvent('postedExpensesFailed', {correlationId: correlationId, statusId: statusId});
 
   });
 
